@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet"> 
+
+
+  </head>
+  <body>
+    <!-- Add Your HTML here -->
+    <header class="encabezado-sitio container">
+      <div class="row justify-content-md-between align-items-center"><!--justify-content-md-between hace que sus elementos se coloquen a cada orilla, para que no queden pegados los col dejando un espacio en medio. existe justify-content-md-center, justify-content-md-around(deja el mismo espacio izquierda y derecha de los elementos) justify-content-md-start los coloca al lado izquiero, justify-content-md-end los coloca del lado derecho. align-items-center los centra los items verticalmente respecto al logo, tambn en la misma clase está end,start, baseline(un poco mas abajo que end), stretch-->
+        <div class="col-lg-4">
+          <a href="index.html">
+            <img src="img/logo.svg" class="img-fluid mx-auto d-block pt-4 pb-4"></div>
+          </a>
+        <div class="col-lg-4">
+          <!--nav.sociales>ul>li*5>a-->
+          <nav class="sociales text-center text-lg-right"> <!--text-lg-right alinea los iconos a la derecha, en tamaños pequelos los centra-->
+            <ul>
+              <li>
+                <a href="http://facebook.com">
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://twitter.com">
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://instagram.com">
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://pinterest.com">
+                  <span class="sr-only">Pinterest</span>
+                </a>
+              </li>
+              <li>
+                <a href="http://youtube.com">
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="navegacion mt-3 py-1">
+      <!--anavbar-expand-md cuando sea tamaño mediano y grande queremos se vea todo los enlaces, y en mas pequeño se vea el menu de hamburgues, navbar-light bg-faded son clases para el color de la navegacion-->  
+      <nav class="nav-principal navbar navbar-expand-md navbar-light bg-faded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_principal" aria-label="Mostrar Navegacion"> <!--data-toggle="collapse" busca dentro del javascript de bootstrap esa funcion para abrir o no el menu de haburguesa-->
+          <span class="navbar-toggler-icon"></span>
+        </button><!--navbar-toggler clase que le dara estilo para que se vea bien el boton de hamburguesa-->
+        <a href="" class="navbar-brand d-lg-none">Carolina Spa</a>
+        <div class="container">
+          <div class="collapse navbar-collapse w-100" id="nav_principal">
+            <ul class="nav nav-justified w-100 flex-column flex-sm-row"><!--nav-justified para que los enlaces se repartan en todo el espacio dísponinble y debe tambien tener la clase w-100 para que le aplique un width de 100%. flex-column coloca uno debajo de otro en pantallas pequeñas, y flex-sm-row para pantallas a partir de sm van a espar horizontalmente -->
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a href="servicios.html" class="nav-link">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a href="productos.html" class="nav-link">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a href="contacto.html" class="nav-link">Contactos</a>
+              </li>
+            </ul>            
+          </div><!--.collapse-->
+        </div><!--.container-->
+      </nav>
+    </div>
+    
+    <div class="container pt-4">
+      <div class="row no-gutters"><!--le quita el margin o padin que le añade bootstrap-->
+        <div class="col-12 hero">
+          <img src="img/servicios.jpg" class="img-fluid">
+          <h2 class="text-uppercase d-none d-md-block py-3 px-5">Servicios</h2><!--va a mostrar en mediano el titulo pero en pequeño lo oculta-->
+        </div>
+      </div>
+    </div>
+    <div class="container pt-4">
+      <div class="row no-gutters">
+        <main class="col-lg-8 contenido-principal">
+          <h2 class="d-block d-md-none text-uppercase text-center"><!----que en resoluciones medianas no se muestre el titulo, solo en tamaño pequeño. esto para que en tamaño pequeño las letras de arriba sean sustituidas por estas y no interfieran en la imagen-->
+            Servicios
+          </h2>
+          <div id="servicios">
+
+
+            <div class="card">
+              <div class="card-header" id="servicio1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#descripcion1"  aria-controls="#descripcion1"><!--aria-expanded="true" para q no se muestre originalmente-->
+                    Servicio 1
+                  </button>
+                </h2>
+              </div><!--.card-header-->
+              <div id="descripcion1" class="collapse show" aria-labelledby="servicio1" data-parent="#servicios"><!--show para que se muestre por defecto. con data-parent especificamos el padre para que se cierre el primer hijo si se abre otro-->
+                <div class="card-body">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque non voluptatem quod hic ratione, doloremque quis asperiores repellendus quisquam quidem voluptatum dignissimos totam ipsa ipsam. Delectus nisi, dolore ex?</p>
+                </div>
+              </div>
+            </div><!--.card-->
+
+            <div class="card">
+              <div class="card-header" id="servicio2">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#descripcion2" aria-expanded="false" aria-controls="#descripcion2"><!--aria-expanded="false" para q no se muestre por defecto-->
+                    Servicio 2
+                  </button>
+                </h2>
+              </div><!--.card-header-->
+              <div id="descripcion2" class="collapse" aria-labelledby="servicio2" data-parent="#servicios">
+                <div class="card-body">
+                  <p>Lorem Lorem Lorem tam ipsa ipsam. Delectus nisi, dolore ex?</p>
+                </div>
+              </div>
+            </div><!--.card-->
+
+            <div class="card">
+              <div class="card-header" id="servicio3">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#descripcion3" aria-expanded="false" aria-controls="#descripcion3"><!--aria-expanded="false" para q no se muestre por defecto-->
+                    Servicio 3
+                  </button>
+                </h2>
+              </div><!--.card-header-->
+              <div id="descripcion3" class="collapse" aria-labelledby="servicio3" data-parent="#servicios">
+                <div class="card-body">
+                  <p>Lorem dolore ex? Lorem Lorem tam ipsa ipsam. Delectus nisi </p>
+                </div>
+              </div>
+            </div><!--.card-->
+
+          </div>
+        </main>
+
+        <aside class="col-lg-4 pt-4 pt-lg-0">
+          <div class="sidebar">
+            <h2 class="text-center text-uppercase mt-4">Nuevos Clientes</h2>
+            <p class="lead text-center mt-4">Recibe 20% de descuento con este cupón</p>
+
+            <div class="cupon px-2 py-5 mt-5">
+              <p class="text-uppercase text-center mb-0">
+                <span class="display-4">20% Descuento</span> <br> en todos los servicios<!--display-4 le añade un tamaño mas grande, va del 1 al 4-->
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="citas container-fluid py-5 mt-5"><!--container-fluid para que el container ocupe todo el espacio disponible-->
+      <div class="row justify-content-center"><!--justify-content-center para centrarlo. offsets quedo en el pasado-->
+        <div class="col-md-8 col-lg-6 text-center"><!--col-lg-6 para que cuando sea muy grande no ocupe tanto espacio-->
+          <h3 class="text-uppercase">Realiza una cita</h3>
+          <p class="mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officia eligendi saepe reprehenderit nam ipsa, ad, ut, itaque quas maiores repellendus! Perferendis, repellat tempore illum, nemo consequatur ipsum laboriosam adipisci.
+          </p>
+          <a href="#" class="btn btn-primary mt-3 text-uppercase">Leer más</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-sitio pt-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="text-uppercase text-center pb-4">Nosotros</h3>
+            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Ut, cupiditate, maxime! Reprehenderit aut doloremque id recusandae modi, dolore odio. Rem praesentium quae cumque consequatur commodi quaerat expedita, dolorum tenetur tempora.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="text-uppercase pb-4">Horario</h3>
+            <p>Lun-Vie: 9 AM - 7PM</p>
+            <p>Sábado: 10 AM - 2PM</p>
+            <p>Domingo: Cerrado</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="text-uppercase pb-4">Contacto</h3>
+            <p>66 East Sunnylope Avenue</p>
+            <p>Lansdowne, PA 19050</p>
+            <nav class="sociales text-center"> <!--text-lg-right alinea los iconos a la derecha, en tamaños pequelos los centra-->
+              <ul>
+                <li>
+                  <a href="http://facebook.com">
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://twitter.com">
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://instagram.com">
+                    <span class="sr-only">Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://pinterest.com">
+                    <span class="sr-only">Pinterest</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://youtube.com">
+                    <span class="sr-only">Youtube</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div><!--.col-md-4-->
+          <hr class="w-100"><!--agrega linea divisora-->
+          <p class="text-center copyright w-100">Carolina Spa & Salon 2018. Todos los derechos reservados</p>
+        </div><!--.row-->
+      </div><!--.container-->
+    </footer>
+    <script src="js/jquery.slim.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

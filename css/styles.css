@@ -1,0 +1,312 @@
+body{
+  background-color: #f8f8f8;
+}
+
+.encabezado{
+  font-size: 2.4rem;
+  font-family: 'Lato', sans-serif;
+  color: #000000;
+  line-height: 2.4rem;/*interlineado*/
+}
+
+.encabezado span{
+  font-size: 3.8rem;
+  font-family: 'Italianno', cursive;
+  color: #e082a8;
+}
+
+/** Sociales **/
+.sociales ul {
+     list-style: none; /**quita el bullet**/
+     margin:0;
+     padding:0;
+ }
+ .sociales ul li {
+     position: relative;
+     display: inline-block;
+ }
+ /*definimos los iconos de redes sociales, es importante tener la carpeta de fonts en el proyecto*/
+ .sociales ul li a::before {
+     font-family: 'FontAwesome';
+     display: inline-block;
+     vertical-align: top;
+     padding: 0.4rem;
+     content: '\f08e';
+     -webkit-font-smoothing: antialiased;
+     font-size: 2rem;/*tamaño del icono*/
+     color: #e082a8;
+ }
+ .sociales ul li a[href*="facebook.com"]::before{
+     content: '\f230'; /**unicode del icono de FontAwesome**/
+ }
+ .sociales ul li a[href*="twitter.com"]::before{
+     content: '\f081';
+ }
+ .sociales ul li a[href*="instagram.com"]::before{
+     content: '\f16d';
+ }
+ .sociales ul li a[href*="pinterest.com"]::before{
+     content: '\f0d2';
+ }
+ .sociales ul li a[href*="youtube.com"]::before{
+     content: '\f16a';
+ }
+
+ /**navegacion**/
+ .navegacion{
+   background-color: #8ed3cc;
+ }
+ .navbar-light .navbar-toggler{
+   background-color: #ffffff;
+ }
+ .navbar-light .navbar-brand,
+ .navbar-light .navbar-brand:hover{
+   color: #ffffff;
+ }
+ .nav-principal{
+   background-image: url(../img/border_horizontal.png), /**se añaden dos para que sea uno arriba y otro abajo**/
+                     url(../img/border_horizontal.png);
+   background-repeat: repeat-x; /**que se muestre solo horizontamente**/
+   background-position: 0px top, 0px bottom; /**para que este uno arriba y uno abajo**/
+ }
+
+ .nav-link{
+   color: #ffffff;
+   font-size: 1.4rem;
+   transition: all .5s ease-in-out;
+   font-family: 'Raleway', sans-serif;
+ }
+ .nav-link:hover{
+   background-color: #bde8dd;
+   color: #000000;
+ }
+
+ /*CAROUSEL*/
+ .carousel-caption h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
+ }
+
+ /*nuevo sitio*/
+ .nuevo-sitio p{
+    font-family: 'Lato', sans-serif;
+    color: #979797;
+    font-size: 1.6rem;
+ }
+
+ /*Servicios*/
+
+ .imagen-servicio img{
+    border: 6px solid #ffffff;
+    -webkit-transition: transform .3s ease;/*le añade .3 segundos en rotar en transform del hover*/
+    -ms-transition: transform .3s ease;/*le añade .3 segundos en rotar en transform del hover*/
+    transition: transform .3s ease;/*le añade .3 segundos en rotar en transform del hover*/
+ }
+
+ .imagen-servicio img:hover{
+    -webkit-transform: scale(1.2) rotate(10deg);/*aumenta el tamaño de la imagen y la rota*/
+    -ms-transform: scale(1.2) rotate(10deg);/*aumenta el tamaño de la imagen y la rota*/
+    transform: scale(1.2) rotate(10deg);/*aumenta el tamaño de la imagen y la rota*/
+ }
+
+ .servicio-info{
+    background-color: #ffffff;
+    margin-top: -5rem;
+ }
+
+ .servicio-info .btn-primary{
+    border-radius: 0; /*elimina el border-radius de bootstrap*/
+    background-color: #e082a8;
+    border: none;/*elimina el border de bootstrap*/
+ }
+
+/*HORARIOS*/
+
+ .horario{
+    background-color: #8ed3cc;
+ }
+
+ .horario h2{
+    font-size: 2.2rem;
+    font-family: 'Lato', sans-serif;
+ }
+
+ .horario .table{
+    border: 2px solid #e082a8; /*le añade un borde rosado*/
+ }
+
+ .horario .table thead {
+    background-color: #e082a8;
+ }
+
+ .horario .table td, 
+ .horario .table thead th {
+    border: none;
+ }
+ 
+ .horario .table tbody tr td {
+    padding: .35rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+ } 
+ .bg-horario{
+    background-image: url(../img/bg_horarios.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /*hace que la imagen ocupe todo su espacio disponible*/
+    min-height: 400px; /*para que no se pierda la imagen cuando se vea en dispositivos muy pequeños, debido a que como no tiene altura, toma como referencia la altura del contenido de la izquierda*/
+ }
+
+ /*PRODUCTOS*/
+ .productos .card{
+    border: none;
+ }
+
+ .productos .card a {
+    color: #000000;
+ }
+
+ .productos .card a:hover{
+    text-decoration: none;
+ }
+
+ .productos .card h3{
+    color: #e082a8;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+ }
+
+ .productos .card p{
+    font-size: .8rem;
+ }
+
+ .productos .card .precio {
+    font-size: 1.6rem;
+    color: #979797;
+ }
+
+ /*CITAS*/
+
+ .citas{
+    background-image: url(../img/bg_citas.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /*background-size: cover tiene problemas para dispositivos pequeños, por lo que se añade background-attachment: fixed y se añade cover en el mediaquery para dispositivos grandes*/
+    color: #ffffff;
+ }
+
+ @media (min-width: 992px){
+    .citas{
+        background-size: cover; /*toma todo el espacio disponible*/
+    }
+ }
+
+ .citas h3{
+    font-size: 3.5rem;
+    font-family: 'Lato', sans-serif;
+ }
+
+ .citas p{
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+ }
+
+ .btn-primary{
+    background-color: #8ed3cc;
+    border: 0;
+    padding: 1rem 5rem;
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+ }
+ .btn-primary:hover{
+    background-color: #69aca5;
+ }
+ /*FOOTER*/
+ .copyright{
+   color: #979797;
+   font-size: .8rem;
+ }
+
+ /*HERO*/
+ .hero{
+   position: relative;/*para posicionar el h2 sobre la imagen*/
+ }
+ .hero h2{
+   position: absolute;
+   bottom: 2rem;
+   right: 0;
+   background-color: #8ed3cc;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 900;
+   color: #ffffff;
+   font-size: 2.8rem;
+ }
+
+ .contenido-principal p{
+   font-size: 1.2rem;
+   line-height: 2.2rem;
+   font-family: 'Lato', sans-serif;
+ }
+
+ /*SIDEBAR*/
+ aside{
+   background-color: #8ed3cc;
+   color: #ffffff;
+ }
+
+ /*Acordion / Servicios*/
+
+ #servicios .card-header{
+   background-color: #e082a8;
+   padding: 0 1.25rem;/*sin paddin arriba y abajo. con algo de paddin a los lados*/
+ }
+ #servicios .card-header .btn-link{
+   color: #ffffff;
+   font-family: 'Lato', sans-serif;
+   font-size: 1.6rem;   
+ }
+ #servicios .card-body{
+   font-size: 1.2rem;
+ }
+ /*cupon*/
+ .cupon{
+   border: 3px dashed #ffffff; /*agrega efecto de cupon*/
+   font-family: 'Lato', sans-serif;
+ }
+ .cupon .display-4{
+   font-size: 2rem;
+ }
+ .cupon p{
+   font-size: 1.2rem;
+ }
+
+ /*PRODUCTOS*/
+ /*si inspeccionamos con el navegador, el elemento .card-columns nos fijamos que posee estas propiedades que ajustan a que solo sean 3 cards por filas, podemos cambiarlo copiando el codigo y sustituyendo*/
+ /*los siguientes son tamaños estandard de bootstrap*/
+ @media (min-width: 576px){
+   .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    /*hereda los siguientes para los demas mediaquerys*/
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+   } 
+ }
+
+ @media (min-width: 992px){
+   .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+ }
+
+ /*Contacto*/
+ .formulario-contacto{
+   border: 2px solid #9a9a9a;
+   background-color: #ffffff;
+ }
